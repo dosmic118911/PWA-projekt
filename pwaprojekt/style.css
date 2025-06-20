@@ -1,0 +1,243 @@
+﻿body {
+	margin: 0;
+    font-family: Calibri;
+    font-style: normal;
+}
+
+
+header {
+	padding-bottom: 0px;
+}
+    header div {
+        max-width: 62%;
+	    margin: auto;
+	    padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+    }
+    header h1 {
+        margin-bottom: 0;
+        padding-bottom: 0px;
+        font-size: 45px;
+        line-height: 33px;
+    }
+    span {
+        color: gold;       
+        font-weight: bold;
+    }
+
+
+nav {
+	border-top: 1px solid #DCDCDC;
+    border-bottom: 1px solid #DCDCDC;
+    margin-bottom: 2px;
+}
+    nav div {
+        max-width: 50%;
+        margin: auto;
+        padding: 6px;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav ul li {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+@media screen and (max-width: 600px) {
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+section {
+    border-top: 1px solid #DCDCDC;
+}
+    section h2 {
+        font-size: 24px;
+        text-transform: uppercase;
+        max-width: 62%;
+        margin: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;        
+       }
+    section div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 35px;
+        max-width: 62%;    
+        margin: auto;             
+    }
+    section div article {
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
+    section div article a {
+        text-decoration: none;
+    }
+    section div article img {
+        width: 100%;
+        margin: 0px;
+    }
+    section div article h3 {
+        font-size: 16px;
+        font-weight: bold;
+        color: black;
+    }
+
+
+footer {
+  background-color: #DCDCDC;
+}
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        max-width: 62%;
+        margin: auto;
+    }
+    .footer-left {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .footer-left li {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .footer-right p {
+        font-weight: bold;
+        color: gray;
+        font-size: 20px;
+        text-align: right;
+        margin: 0;
+    }
+
+
+button, .button-custom {
+    background-color: gold; 
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* CSS za clanak.html*/
+main {
+    max-width: 55%;
+    margin: auto;
+}
+
+.headline {
+  padding: 10px;
+  margin: auto;
+  max-width: 70%;
+  text-align: center;
+}
+
+.headline h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  font-weight: bold;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.image img {
+  max-width: 96%;
+  height: auto;
+}
+
+.article {
+  margin: auto;
+  padding: 0 20px 40px;
+}
+
+.article h2 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.footer-clanak {
+  background-color: gray;
+}
+    .footer-clanak div {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        max-width: 62%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-clanak div p {
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 10px;
+    }
+
+
+/* CSS za unos.html */
+form {
+    margin: 20px;
+    margin-left: 50px;
+}
+label {
+    font-size: 20px;
+}
+
+.form-item {
+    padding: 10px;
+}
+
+/* CSS za administrator.php */
+.section-admin form {
+    padding: 20px;
+    border: 2px solid black;
+    max-width: 62%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.form-item-admin {
+    padding: 15px;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid grey;
+    max-width: 80%;
+}
+
+
+/* CSS za login.php, registracija.php */
+
+.div-custom {
+    padding: 30px;
+    margin: auto;
+}

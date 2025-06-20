@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Unos vijesti</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>franceinfo<span>:</span></h1>
+        </div>
+    </header>
+
+    <nav>
+        <div>
+            <ul>
+                <li><a href="indeks.php">home</a></li>
+                <li><a href="elections.php">elections</a></li>
+                <li><a href="lesjt.php">les jt</a></li>
+                <li><a href="administrator.php">administracija</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <form action="skripta.php" method="POST" enctype="multipart/form-data"> 
+        <div class="form-item"> 
+            <label for="title">Titre de l'actualité (Naslov vijesti)</label> 
+            <div class="form-field"> 
+                <input type="text" id="title" name="title" class="form-field-textual"> 
+            </div> 
+        </div> 
+
+        <div class="form-item"> 
+            <label for="about">Résumé de l'actualité (Kratki sadržaj vijesti)</label>
+            <div class="form-field"> 
+                <textarea id="about" name="about" cols="30" rows="10" class="form-field-textual"></textarea> 
+            </div> 
+        </div>
+
+        <div class="form-item"> 
+            <label for="content">Contenu d'actualité (Sadržaj vijesti)</label> 
+            <div class="form-field"> 
+                <textarea id="content" name="content" class="form-field-textual"></textarea> 
+            </div> 
+        </div>
+        
+        <div class="form-item">
+            <label for="pphoto">Image: (Slika)</label> 
+            <div class="form-field"> 
+                <input id="pphoto" type="file" accept="image/jpg,image/gif" class="input-text" name="pphoto"> 
+            </div> 
+        </div>
+
+        <div class="form-item"> 
+            <label for="category">Catégorie d'actualités (Kategorija vijesti)</label> 
+            <div class="form-field"> 
+                <select id="category" name="category" class="form-field-textual"> 
+                    <option value="elections">Elections</option> 
+                    <option value="lesjt">Les jt</option>                 
+                </select> 
+            </div> 
+        </div>
+
+        <div class="form-item"> 
+            <label>Enregistrer dans les archives: (Spremiti u arhivu)</label>    
+            <div><input type="checkbox" name="archive"></div>          
+        </div>
+
+        <div class="form-item"> 
+            <button type="reset" value="Poništi">Annuler (Poništi)</button> 
+            <button type="submit" value="Prihvati">Accepter (Prihvati)</button> 
+        </div> 
+    </form> 
+
+
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-left">
+                <li>Denis Osmić</li>
+                <li>dosmic@tvz.hr</li>
+                <li>2025.</li>
+            </ul>
+
+            <div class="footer-right">
+                <p>france.tv</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

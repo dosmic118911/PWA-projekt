@@ -1,0 +1,3 @@
+Kada se unosi novi korisnik u bazu, nema dopuštenja za dodavanje i uređivanje vijesti.
+Korisnik sa administrativnim pravima je: admin, šifra admin
+Korisnik bez administrativnih prava: dosmic, šifra dosmic
