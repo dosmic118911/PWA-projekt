@@ -26,10 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $target = UPLPATH . $image;
             move_uploaded_file($_FILES["pphoto"]["tmp_name"], $target);
 
-            $stmt = $conn->prepare("UPDATE news SET title=?, about=?, content=?, image=?, category=?, archive=? WHERE id=?");
+            $stmt = $conn->prepare("UPDATE news SET title=?, about=?, content=?, image=?, category=?, archive=?, date=DATE(NOW()) WHERE id=?");
             $stmt->bind_param("ssssssi", $title, $about, $content, $image, $category, $archive, $id);
         } else {
-            $stmt = $conn->prepare("UPDATE news SET title=?, about=?, content=?, category=?, archive=? WHERE id=?");
+            $stmt = $conn->prepare("UPDATE news SET title=?, about=?, content=?, category=?, archive=?, date=DATE(NOW()) WHERE id=?");
             $stmt->bind_param("ssssii", $title, $about, $content, $category, $archive, $id);
         }
 
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </nav>
 <section class="section-admin">
     <?php
-    $result = $conn->query("SELECT * FROM news");
+    $result = $conn->query("SELECT * FROM news ORDER BY id DESC");
     while ($row = $result->fetch_assoc()) {
         echo '<form enctype="multipart/form-data" action="" method="POST">
               <div class="form-item-admin">
